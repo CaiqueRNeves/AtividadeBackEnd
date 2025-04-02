@@ -1,0 +1,44 @@
+Revisão Back-End
+
+1-API quer dizer Aplicattion programing Interface, é um software que importa funcionalidades de alguma aplicação e faz a 
+comunicação entre elas, basicamente é um conjunto de métodos e protocolos que serve como uma ponte.
+
+2-Get,post, put e delete são verbos http que facilmente podem ser correlacionados com operações crud, pois tratam de operações que envolvem a comunicação com uma api que manipula dados. Post equivale ao comando criar, que é quando queremos criar um recurso no back-end. Get equivale ao verbo Read, que é quando queremos retornar uma representação de um recurso do sistema, como por exempro, a resposta de alguma informação contida dentro do banco de dados. Put equivale ao recurso update, que quer dizer "atualizar", que é quando queremos que por exemplo, um novo dado adicionado no banco, possa ser lido logo após.Delete do Crud equivale ao Delete, que é utilizado quando queremos excluir uma informação ou dado, ou uma determinada aplicação.
+
+3-Rest é importante para o desenvolvimento de uma api, pois facilita na interoperabilidade entre aplicações, e a padronização dos métodos. Este método facilita a comunicação entre api's, favorecendo um maior grau de segurança, e legibilidade no código, e facilita na integração, pois não é necessário refatorar outra aplicação escrita em linguagem distinta, em favor da que estamos desenvolvendo.
+
+4-Endpoints são URL's que respondem à solicitações de clientes, quando eles solicitam acessar alguma área do site. Por exemplo, quando temos um site que possui um menu lateral, ao clicarmos em uma das abas disponíveis, somos direcionados à um endereço "URL", isso acontece porque ao adicionarmos uma funcionalidade àquele botão ou aba, o programador por meio do uso do express.js, gerencia essa rota e programa este endpoint como destino.
+
+5-Estes status ajudam a comunicar o resultado de uma operação, pois cada um deles contém um tipo de mensagem a ser repassada, como por exemplo, o 404 que quer dizer que a página da web acessada não existe, o erro 200 quer dizer que a operação ou requisição feita pelo usuário foi bem sucedida, já a 500 quer dizer que o servidor teve dificuldades para acessar determinada solicitação, ou realizar alguma operação.
+
+6-Postman e Insomnia.
+
+7-Ela pode implementar por meio da ferramenta get, que é quando ela cria uma determinada rota, e essa rota vai ser retornada quando uma determinada função de call back for ativada.
+
+8-O back-end garante o acesso à determinadas rotas, quando os tokens de verificação fornecidos pelo jwt são validados com sucesso pelo banco de dados, o acesso pode ser garantido ou não por que o sistema utiliza criptografia para proteger dados sigilosos, criptografia esta prevista pela Lei geral de proteção de Dados(LGPD).
+
+9-Um token JWT é um tipo de senha criptografada, para acesso aos dados contidos em banco de dados.
+
+10- A validação de uma requisição Post(Criar), e Put(Atualizar), é importante para verificar se o usuário e o dado criado em banco é seguro ou não, e se o usuário que adicionou determinado dado é autorizado pelo sistema ou não, pois há relevante preocupação na inserção de arquivos maliciosos no banco com o objetivo de prejuducar o sistema e as pessoas que dele se utilizam.
+
+11-Validação baseada em tokens e firewalls.
+
+12- Os Logs ajudam na identificação de problemas, geralmente na refatoração de algum código, insights valiosos sobre o comportamento da aplicação fornecidos por estes logs, são utilizados para tomada de decisões e otimização do código.
+
+13- O erro 500 quer dizer que o servidor teve dificuldades para acessar determinada solicitação, isso pode ser gerado por inúmeras causas, causas essas que podem ser  identificadas por meio destas mensagens de logs.
+
+14- Porque isso determina a latência de um serviço, se um serviço possui Alta latência isso quer dizer que essa API consegue atender poucos clientes, e isso pode ser explicada pela lei de little.
+
+15- Ela acessa a rota definida "/alunos", Por meio do seguinte código, "app.get("/Alunos",(req,res) => {
+    res.render("alunos");
+})".
+
+16- É utilizado pois, configura a conexão do banco de dados para executar comandos SQL em modo serializado. Isso significa que todas as consultas e operações serão executadas sequencialmente, uma após a outra, em vez de em paralelo, ou seja, garante a consistência dos dados inseridos.
+
+17- É escrito na parte de criação de tabelas do banco de dados, o "select" seleciona a tabela a ser criada e a partir dai poderá receber novos dados.
+
+18- Vai se criar uma Incompatibilidade com os clientes existentes no banco, clientes que estavam usando o método GET para acessar a rota "/alunos" receberão um erro 405 se tentarem continuar usando GET, ou seja, inviabilizará a inserção de novos dados para o sistema.
+
+19- 
+
+20- Adicionar uma rota que responda ao método POST,Configurar um middleware para processar o corpo da requisição (se ainda não estiver configurado), Implementar a lógica para validar e salvar os dados recebidos, Adicionar tratamento de erros adequado, implementar verificações de autenticação/autorização, se necessário, e atualizar a documentação da API para informar sobre o novo método disponível.
